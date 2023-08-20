@@ -166,4 +166,8 @@ html {
     row-gap: 20px
     ;
   }
+
+  .comment-card {
+    top: 0px;
+  }
 }
