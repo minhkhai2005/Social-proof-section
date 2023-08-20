@@ -1,0 +1,169 @@
+:root {
+
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'League Spartan', sans-serif; font-size: 15px;
+  box-sizing: border-box;
+}
+
+
+
+html {
+  background: url(./images/bg-pattern-top-desktop.svg) no-repeat left top,
+              url(./images/bg-pattern-bottom-desktop.svg) no-repeat right bottom;
+  background-attachment: fixed;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0px 50px;
+  color: black;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+}
+
+.main-title {
+  color: var(--Very-Dark-Magenta);
+  font-size: 48px;
+  width: 60%;
+  font-weight: 700;
+}
+
+.message {
+  color: var(--Dark-Grayish-Magenta);
+  width: 70%;
+  margin: 20px 0px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.rating {
+  display: flex;
+  height: 45px;
+  width: 80%;
+  align-items: center;
+  background-color: var(--Light-Grayish-Magenta);;
+  padding: 0px 30px;
+  margin: 12px 0px;
+  border-radius: 5px;
+}
+
+.rating-stars-title{
+  margin-left: 30px;
+}
+
+.rating-stars svg {
+  margin: 0px 4px;
+}
+
+.comment {
+  grid-column: 1 / 3;
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  margin-top: 30px;
+}
+
+.comment-card {
+  background-color: var(--Very-Dark-Magenta);
+  color: var(--White);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 12px rgba(238, 104, 164, 0.1);
+}
+
+.comment-card-head {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.comment-card-avt img {
+  border-radius: 50%;
+  scale: 0.6;
+}
+
+.comment-card-comment {
+  line-height: 21px;
+}
+
+.comment-card-name {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.verified::after {
+  content: "Verified Buyer";
+  display: block;
+  color: var(--Soft-Pink);
+  margin-top: 5px;
+}
+
+@media (max-width: 1024px){
+
+  html {
+    background: url(./images/bg-pattern-top-mobile.svg) no-repeat left top,
+                url(./images/bg-pattern-bottom-mobile.svg) no-repeat right bottom,;
+    background-attachment: fixed; 
+  }
+
+  .wrapper{
+    height: auto;
+    padding: 0px;
+    padding: 20px;
+    padding-top: 50px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+
+  .main-title {
+    font-size: 36px;
+    text-align: center;
+    width: auto;
+  }
+
+  .message {
+    width: auto;
+    text-align: center;
+  }
+
+  .rating {
+    margin-left: 0px !important;
+    width: auto;
+    display: block;
+    text-align: center;
+    height: fit-content;
+    padding: 12px 0px;
+  }
+
+  .rating-stars-title {
+    margin: 5px 0px 0px 0px ;
+  }
+
+  .comment {
+    flex-direction: column;
+    row-gap: 20px
+    ;
+  }
+}
